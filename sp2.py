@@ -5,7 +5,7 @@ macaddr = sys.argv[2]
 state = sys.argv[3]
 
 try:
-	device = broadlink.sp2(host=(ip,80), mac=bytearray.fromhex(macaddr))
+	device = broadlink.sp2(host=(ip,80), mac=bytearray.fromhex(macaddr), devtype=0x2711)
 	device.auth()
 	time.sleep(3)
 	device.host
